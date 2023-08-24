@@ -123,15 +123,13 @@ public class Main {
                     try {
                         funciones.get(o - 1).saleTicket(cantT);
                     } catch (Exception e) {
-                        e.printStackTrace();
-                        return;
+                        System.out.println("Error - " + e.getMessage());
                     }
                     System.out.println("Ticket's Vendidos :" + cantT + " a Q." + funciones.get(o - 1).getMovie().getTicketPrice());
                     System.out.println("Total : " + (cantT * funciones.get(o - 1).getMovie().getTicketPrice()));
                     System.out.println(((mov) funciones.get(o - 1).getMovie()).timeMov());
                 } catch (Exception e) {
                     System.out.println("Error al Realizar la Venta!!!!");
-                    return;
                 }
             } else {
                 System.out.println("Feliz dia Tickets Vendidos 0!");

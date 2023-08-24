@@ -14,8 +14,11 @@ public class movieScreening {
     }
 
     public int saleTicket(int cant) throws Exception {
-        if (this.cantTicket <= 0)
+        if (cant == 0) {
+            throw new Exception("Error al Realizar la Venta");
+        } else if (this.cantTicket <= 0) {
             throw new Exception("Se acabaron las entradas");
+        }
         return this.cantTicket -= cant;
     }
 
